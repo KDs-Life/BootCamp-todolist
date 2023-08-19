@@ -4,29 +4,49 @@
 }
 
 body {
-    background-color: aqua;
-    width: 100%;
-    height: 100vh;
-   font-family: 'poppins';
+  background-color:  #E7ECEF;
+  width: 100%;
+  height: 100vh;
+  font-family: 'poppins';
+}
+
+header {
+  margin: 20px;
+
+}
+
+img.col.logo {
+  max-width: 70px;
 }
 
 main {
-    border: solid 1px green;
+  border: solid 1px green;
+  margin: 20px;
 }
-.container {
-    border: solid 2px red
 
-    
+.div.row.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.btn.btn-primary {
+}
+
+.container {
+  border: 2px solid red;
 }
 
 .row {
-    border: solid 2px yellow;
-    padding: 20px;
-    display: flex;
+  border: solid 2px rgb(0, 81, 255);
+  padding: 10px;
 }
+
+.col,
 .col-3 {
     border: solid 1px pink;
 }
+
 #share {
 
 }
@@ -50,3 +70,15 @@ main {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   }
+
+
+/*   //////////////////////
+  Corporate Colors 
+  "Clumsy Elephant"
+
+  #0f7173
+  #F05D5E
+  #E7ECEF
+  #272932
+  #D8A47F
+  ////////////////////// */
