@@ -24,14 +24,39 @@ main {
   margin: 20px;
 }
 
+.container {
+  border: solid 2px red; 
+}
+
+.row {
+  border: solid 2px yellow;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+} 
+
+form {
+border: solid 3px rgb(237, 83, 178);
+}
+
+#new-task-input {
+background-color: rgb(255, 255, 0);
+}
+
+.add-task {
+  border: solid 4px rgb(104, 211, 72);
+}
+
+
+
 .div.row.input {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-button.btn.btn-primary {
-}
+/* button.btn.btn-primary {
+} */
 
 .container {
   border: 2px solid red;
