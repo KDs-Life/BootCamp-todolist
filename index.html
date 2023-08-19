@@ -23,7 +23,7 @@
     ></script>
 
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>To-Do-List</title>
   </head>
   <body>
     <header>
@@ -48,9 +48,9 @@
           <div class="col"></div>
           <div class="col"><p>Datum</p></div>
         </div>
-        <div class="row input">
-          <form action="">
-            <div class="input-group mb">
+        <div class="row">
+          <!-- <form action="">
+            <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <div class="input-group-text">
                   <input
@@ -59,16 +59,99 @@
                   />
                 </div>
               </div>
+              
               <input
                 type="text"
                 class="form-control"
+                id="new-task-input"
                 aria-label="Text input with checkbox"
               />
             </div>
-            <button class="btn btn-primary" type="submit">Add</button>
-          </form>
+            <button class="btn btn-primary" type="submit" id="submit">Add Task</button>
+          </form> -->
+
+          <div class="add-task">
+            <input id="new-task-input" type="text" placeholder="Add A Task..." value=""/>
+          </div>
+          <div class="add-task-button">
+            <button class="add-task-btn" id="add-task-btn"> + </button>
+          </div>
         </div>
+          
+
+<!-- task1 -->
+       
         <div class="row"></div>
+
+         <form action="">
+            <div class="input-group mb-3"> 
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input
+                    type="checkbox"
+                    aria-label="Checkbox for following text input"
+                  />
+                </div>
+              </div>
+              
+              <input
+                type="text"
+                class="form-control"
+                id="task-input"
+                aria-label="Text input with checkbox"
+              />
+            </div>
+            <!-- <button class="btn btn-primary" type="submit" id="submit">Add Task</button> -->
+          </form> 
+<!-- end of task1 -->
+
+
+<!-- task2 -->
+        <div class="row"></div>
+        <form action="">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+              </div>
+            </div>  
+            
+            <input
+              type="text"
+              class="form-control"
+              id="task-input"
+              aria-label="Text input with checkbox"
+            />
+          </div>
+        </form> 
+<!-- end of task2 -->
+
+<!-- task3 -->
+<div class="row"></div>
+<form action="">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <input
+          type="checkbox"
+          aria-label="Checkbox for following text input"
+        />
+      </div>
+    </div>  
+    
+    <input
+      type="text"
+      class="form-control"
+      id="task-input"
+      aria-label="Text input with checkbox"
+    />
+  </div>
+</form> 
+<!-- end of task3 -->
+
         <div class="row"><button id="share">Share</button></div>
       </div>
     </main>
