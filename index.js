@@ -1,3 +1,8 @@
+/* get actual date for the to-do entrys */
+let date = new Date().toLocaleDateString();
+document.getElementById("entry_date").innerHTML = date;
+console.log(date);
+
 const addButton = document.getElementById("add_Button");
 const userInput = document.getElementById("user_input");
 
@@ -8,13 +13,13 @@ addButton.addEventListener("click", addListItem);
 function addListItem(e) {
   e.preventDefault();
   console.log("Whatup");
-  const listElement = document.createElement("li");
+/*   const listElement = document.createElement("li");
   listElement.innerHTML = userInput.value;
   document.getElementById("list_items").appendChild(listElement);
-
+ */
   const divElement = document.createElement("div");
   divElement.classList.add("list_div_item");
-  divElement.innerHTML = "Created a ne Div";
+  divElement.innerHTML = `<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><h2>${userInput.value}</h2><p>${date}</p>`;
   document.getElementById("list_items").appendChild(divElement);
 
   userInput.value = "";

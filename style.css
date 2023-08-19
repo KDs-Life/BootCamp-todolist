@@ -23,10 +23,20 @@ main {
   margin: 20px;
 }
 
-.div.row.input {
+#entry_date {
+  text-align: right;
+  padding: 0;
+}
+
+.row.input {
+  background-color: #F05D5E;
+}
+
+form {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 button.btn.btn-primary {
@@ -34,6 +44,7 @@ button.btn.btn-primary {
 
 .container {
   border: 2px solid red;
+  background-color: #D8A47F;
 }
 
 .row {
@@ -53,6 +64,13 @@ button.btn.btn-primary {
 ul {
   list-style: none;
 }
+
+.list_div_item {
+  display: flex;
+  background-color: #F05D5E;
+  height: 30px;
+}
+
 
 #share {
 }
