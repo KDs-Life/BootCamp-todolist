@@ -31,16 +31,16 @@ function addListItem(e) {
                               id="flexCheckDefault"
                             />
                             <div class="todo_text_area">
-                              <textarea placeholder="Go for a walk" rows="1" cols="19">${userInput.value}</textarea>
+                              <textarea placeholder="To Do" rows="1" cols="19">${userInput.value}</textarea>
                               <p>19.08.2023</p>
                             </div>
-                            <span class="material-symbols-outlined"> delete </span>`
-/*   divElement.innerHTML = `<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><p>${userInput.value}</p><br><p>${date}</p><span class="material-symbols-outlined">
+                            <span class="material-symbols-outlined"> delete </span>`;
+  /*   divElement.innerHTML = `<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><p>${userInput.value}</p><br><p>${date}</p><span class="material-symbols-outlined">
   delete
   </span>`; */
   document.getElementById("list_items").appendChild(divElement);
 
-  localStorage.setItem(item, userInput.value);
+  /*   localStorage.setItem(item, userInput.value); */
 
   userInput.value = "";
 
