@@ -13,13 +13,15 @@ addButton.addEventListener("click", addListItem);
 function addListItem(e) {
   e.preventDefault();
   console.log("Whatup");
-/*   const listElement = document.createElement("li");
+  /*   const listElement = document.createElement("li");
   listElement.innerHTML = userInput.value;
   document.getElementById("list_items").appendChild(listElement);
  */
   const divElement = document.createElement("div");
   divElement.classList.add("list_div_item");
-  divElement.innerHTML = `<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><h2>${userInput.value}</h2><p>${date}</p>`;
+  divElement.innerHTML = `<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><p>${userInput.value}</p><br><p>${date}</p><span class="material-symbols-outlined">
+  delete
+  </span>`;
   document.getElementById("list_items").appendChild(divElement);
 
   userInput.value = "";

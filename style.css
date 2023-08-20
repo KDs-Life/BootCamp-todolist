@@ -14,8 +14,22 @@ header {
   margin: 20px;
 }
 
+.col.overview {
+  padding: 0;
+}
+
 img.col.logo {
-  max-width: 70px;
+  max-width: 60px;
+  height: 30px;
+}
+
+.col.menue {
+  padding: 0;
+  text-align: right;
+}
+
+.col.menue p {
+
 }
 
 main {
@@ -23,13 +37,14 @@ main {
   margin: 20px;
 }
 
-#entry_date {
-  text-align: right;
-  padding: 0;
+.container.entry_content {
+  border: 2px solid red;
+  background-color: #d8a47f;
+  padding: 10px;
 }
 
 .row.input {
-  background-color: #F05D5E;
+  padding: 15px;
 }
 
 form {
@@ -39,17 +54,29 @@ form {
   flex-wrap: wrap;
 }
 
-button.btn.btn-primary {
+#add_Button {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
-.container {
-  border: 2px solid red;
-  background-color: #D8A47F;
+.col h3 {
+  font-size: 1.2rem;
+  margin: 0;
 }
 
-.row {
+.row.entry_header {
   border: solid 2px rgb(0, 81, 255);
-  padding: 10px;
+  margin: 0 0 10px 0;
+}
+
+#entry_date {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.row.input {
+  background-color: #f05d5e;
 }
 
 .row.list_content {
@@ -57,7 +84,9 @@ button.btn.btn-primary {
 }
 
 .col,
-.col-3 {
+.col-3,
+.col-4,
+.col-8 {
   border: solid 1px pink;
 }
 
@@ -67,13 +96,12 @@ ul {
 
 .list_div_item {
   display: flex;
-  background-color: #F05D5E;
-  height: 30px;
+  align-items: center;
+  background-color: #f05d5e;
+  padding: 7px;
+  margin: 5px;
 }
 
-
-#share {
-}
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
