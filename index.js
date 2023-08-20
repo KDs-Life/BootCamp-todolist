@@ -23,10 +23,21 @@ function addListItem(e) {
   document.getElementById("list_items").appendChild(listElement);
  */
   const divElement = document.createElement("div");
-  divElement.classList.add();
-  divElement.innerHTML = `<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><p>${userInput.value}</p><br><p>${date}</p><span class="material-symbols-outlined">
+  divElement.classList.add("list_div_item");
+  divElement.innerHTML = `<input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <div class="todo_text_area">
+                              <textarea placeholder="Go for a walk" rows="1" cols="19">${userInput.value}</textarea>
+                              <p>19.08.2023</p>
+                            </div>
+                            <span class="material-symbols-outlined"> delete </span>`
+/*   divElement.innerHTML = `<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><p>${userInput.value}</p><br><p>${date}</p><span class="material-symbols-outlined">
   delete
-  </span>`;
+  </span>`; */
   document.getElementById("list_items").appendChild(divElement);
 
   localStorage.setItem(item, userInput.value);
