@@ -18,7 +18,7 @@ header {
   padding: 0;
 }
 
-img.col.logo {
+.col.logo {
   max-width: 60px;
   height: 30px;
 }
@@ -28,17 +28,12 @@ img.col.logo {
   text-align: right;
 }
 
-.col.menue p {
-
-}
-
 main {
   border: solid 1px green;
   margin: 20px;
 }
 
 .container.entry_content {
-  border: 2px solid red;
   background-color: #d8a47f;
   padding: 10px;
 }
@@ -59,19 +54,28 @@ form {
   margin-bottom: 0;
 }
 
-.col h3 {
+.entry_header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 10px 0;
+}
+
+.entry_topic {
+  width: 60%;
+}
+
+.entry_topic h3 {
   font-size: 1.2rem;
   margin: 0;
 }
 
-.row.entry_header {
-  border: solid 2px rgb(0, 81, 255);
-  margin: 0 0 10px 0;
+.entry_date_container {
+  text-align: right;
+  width: 20%;
 }
 
 #entry_date {
-  text-align: right;
-  padding: 0;
   margin: 0;
 }
 
@@ -81,25 +85,45 @@ form {
 
 .row.list_content {
   padding: 20px;
+  padding-bottom: 0;
 }
 
-.col,
-.col-3,
-.col-4,
-.col-8 {
-  border: solid 1px pink;
-}
-
-ul {
+.unordered_list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .list_div_item {
   display: flex;
   align-items: center;
   background-color: #f05d5e;
-  padding: 7px;
-  margin: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.todo_text_area {
+  margin-left: 6px;
+}
+
+textarea {
+  background: transparent;
+  color: #fff;
+  border: 0 none;
+  font-size: 1rem;
+  resize: none;
+}
+
+.todo_text_area p {
+  font-size: 0.6rem;
+  margin-bottom: 0;
+}
+
+.share_row {
+  display: flex;
+  justify-content: center;
 }
 
 /* For mobile phones: */
