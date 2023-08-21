@@ -1,18 +1,21 @@
-const itemsArray = localStorage.getItem("item")
+/* const itemsArray = localStorage.getItem("item")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
-console.log(itemsArray);
+console.log(itemsArray); */
 
-/* get actual date for the to-do entrys */
+/* get Date for the to-do entrys */
 let date = new Date().toLocaleDateString();
 document.getElementById("entry_date").innerHTML = date;
+document.getElementById("entry_date2").innerHTML = date;
+document.getElementById("entry_date3").innerHTML = date;
 console.log(date);
 
+/* initialize variables and arrays */
 const addButton = document.getElementById("add_Button");
 const userInput = document.getElementById("user_input");
+const userInputArray = [];
 
-/* const addListItem = document.getElementById("list_items"); */
-
+/* DOM Manipulation for Add Button */
 addButton.addEventListener("click", addListItem);
 
 function addListItem(e) {
@@ -40,7 +43,21 @@ function addListItem(e) {
   </span>`; */
   document.getElementById("list_items").appendChild(divElement);
 
-  /*   localStorage.setItem(item, userInput.value); */
+  /* Die ToDo Einträge sollen als Array in Local Storage 
+  gespeichert werden unter einem Key */
+
+  userInputArray.push(userInput.value);
+  console.log(userInputArray);
+  /*   localStorage.setItem("items", userInputArray); */
+  localStorage.setItem("itemsTwo", JSON.stringify(userInputArray));
+
+  /* localStorage.setItem("item", userInput.value);
+  item += 1;
+ */
+
+  /*   localStorage.setItem("key/item", userInput.value); */
+  /*   localStorage.setItem("item", JSON.stringify(userInput.value)); */
+  /*   Der Key muss dynamisch sein: wie kann ich den key dynamisch gestalten, damit eine Liste angefertigt wird? */
 
   userInput.value = "";
 
