@@ -1,3 +1,4 @@
+
 const addButton = document.getElementById("add_Button");
 const userInput = document.getElementById("user_input");
 
@@ -6,23 +7,22 @@ const taskItem = document.getElementById("list_items");
 
 
 ///Phillip
+
+
 const itemsArray = localStorage.getItem("item")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
 console.log(itemsArray);
 
+
 /* get actual date for the to-do entrys */ ///Phillip
+
+
 let date = new Date().toLocaleDateString();
 document.getElementById("entry_date").innerHTML = date;
 console.log(date);
 
 
-
-/* const addListItem = document.getElementById("list_items"); */
-
-
-
-//addButton.addEventListener("click", addListItem);
 
 function addListItem(e) {
   e.preventDefault();
@@ -77,11 +77,6 @@ function addTextAlert() {
   }
 }
 
-/*
-function deleteButton() {
-  taskItem.remove();
-}
-*/
 
 
 
@@ -99,7 +94,10 @@ addButton.addEventListener("click", addListItem);
 /////////////DELETE button ///////// 
 
 
-
+/*
+function deleteButton() {
+  taskItem.remove();
+}
+*/
 
 //deleteButton.addEventListener("click", deleteButton);
-

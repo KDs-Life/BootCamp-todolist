@@ -24,6 +24,18 @@ header {
   height: 30px;
 }
 
+
+
+.col.overview {
+  padding: 0;
+}
+
+.col.logo {
+  max-width: 60px;
+  height: 30px;
+}
+
+
 .col.menue {
   padding: 0;
   text-align: right;
@@ -52,6 +64,69 @@ form {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+}
+
+#add_Button,
+.btn.btn-primary.btn-sm {
+  margin-top: 5px;
+  margin-bottom: 0;
+  border: none;
+  background-color: #0f7173;
+}
+
+.entry_header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 10px 0;
+}
+
+.entry_header2 {
+  color: #d8a47f;
+  background-color: #0f7173;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 10px 0;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.entry_header3 {
+  color: #d8a47f;
+  background-color: #272932;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 10px 0;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.entry_topic {
+  width: 60%;
+}
+
+.entry_topic h3 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.entry_date_container {
+  text-align: right;
+  width: 20%;
+}
+
+#entry_date {
+  margin: 0;
+}
+
+
 }
 
 #add_Button,
@@ -126,9 +201,13 @@ form {
 
 
 
+
 .list_div_item {
   border: 3px solid rgb(60, 255, 0);
   color: #286080;
+
+.list_div_item {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,7 +234,11 @@ form {
 
 textarea {
   background: transparent;
+
   color: #fffffc;
+
+  color: #fff;
+
   border: 0 none;
   font-size: 1rem;
   resize: none;
@@ -167,6 +250,13 @@ textarea {
   font-size: 0.6rem;
   margin-bottom: 0;
 }
+
+
+.todo_text_area p {
+  font-size: 0.6rem;
+  margin-bottom: 0;
+}
+
 
 .share_row {
   display: flex;
@@ -228,5 +318,4 @@ textarea {
   #272932
   #D8A47F
   ////////////////////// */
-
 
