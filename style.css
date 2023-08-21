@@ -4,98 +4,212 @@
 }
 
 body {
-  background-color:  #E7ECEF;
+  background-color: white;
   width: 100%;
   height: 100vh;
-  font-family: 'poppins';
+  font-family: "poppins";
 }
 
 header {
   margin: 20px;
-
 }
 
-img.col.logo {
-  max-width: 70px;
+.col.overview {
+  padding: 0;
+}
+
+.col.logo {
+  max-width: 60px;
+  height: 30px;
+}
+
+.col.menue {
+  padding: 0;
+  text-align: right;
 }
 
 main {
-  border: solid 1px green;
   margin: 20px;
 }
 
-.container {
-  border: solid 2px red; 
-}
 
-.row {
-  border: solid 2px yellow;
-  padding: 20px;
-  display: flex;
-  text-align: center;
-} 
-
-form {
-border: solid 3px rgb(237, 83, 178);
-}
-
-#new-task-input {
-background-color: rgb(255, 255, 0);
-}
-
-.add-task {
-  border: solid 4px rgb(104, 211, 72);
-}
-
-
-
-.div.row.input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* button.btn.btn-primary {
-} */
-
-.container {
-  border: 2px solid red;
-}
-
-.row {
-  border: solid 2px rgb(0, 81, 255);
+.container.entry_content {
+  background-color: #e7ecef;
+  border-radius: 10px;
   padding: 10px;
 }
 
-.col,
-.col-3 {
-    border: solid 1px pink;
+.input_container {
+  border-radius: 5px;
+  width: 100%;
+  background-color: #f05d5e;
+  padding: 15px;
 }
 
-#share {
-
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+#add_Button,
+.btn.btn-primary.btn-sm {
+  margin-top: 5px;
+  margin-bottom: 0;
+  border: none;
+  background-color: #0f7173;
+}
+
+.entry_header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 10px 0;
+}
+
+.entry_header2 {
+  color: #d8a47f;
+  background-color: #0f7173;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 10px 0;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.entry_header3 {
+  color: #d8a47f;
+  background-color: #272932;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 10px 0;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.entry_topic {
+  width: 60%;
+}
+
+.entry_topic h3 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.entry_date_container {
+  text-align: right;
+  width: 20%;
+}
+
+#entry_date {
+  margin: 0;
+}
+
+.row.list_content {
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.unordered_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list_div_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d8a47f;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.list_div_item:hover {
+  padding: 7px 15px;
+  background-color: #ca7e49;
+  box-shadow: black;
+}
+
+.form-check-input {
+  margin: 0px
+}
+
+.todo_text_area {
+  margin-left: 6px;
+}
+
+textarea {
+  background: transparent;
+  color: #fff;
+  border: 0 none;
+  font-size: 1rem;
+  resize: none;
+}
+
+.todo_text_area p {
+  font-size: 0.6rem;
+  margin-bottom: 0;
+}
+
+.share_row {
+  display: flex;
+  justify-content: center;
+}
+
 /* For mobile phones: */
 [class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
     width: 100%;
   }
-  
-  @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-  }
-
+}
 
 /*   //////////////////////
   Corporate Colors 
