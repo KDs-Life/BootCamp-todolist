@@ -1,7 +1,23 @@
-/* const itemsArray = localStorage.getItem("item")
+/* die items die sich in Local Storage befinden werden in einem
+neuen Array gespeichert und geparst*/
+const itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
-console.log(itemsArray); */
+console.log(itemsArray);
+
+/* die  items aus dem itemsArray/dem Local Storage sollen 
+in der ToDo Liste angezeigt werden*/
+for (let i = 0; i < itemsArray.length; i++) {
+  let li = document.createElement("li");
+  li.innerHTML = itemsArray[i];
+  document.getElementById("list_items").appendChild = li;
+  console.log(itemsArray[i]);
+}
+/* const listItem = itemsArray.forEach(element => {
+document.getElementById("list_items").innerHTML = element;
+console.log(element);
+}); */
+
 
 
 /* get Date for the to-do entrys */
@@ -15,19 +31,14 @@ console.log(date);
 const addButton = document.getElementById("add_Button");
 const userInput = document.getElementById("user_input");
 
-const userInputArray = [];
-
 /* DOM Manipulation for Add Button */
 addButton.addEventListener("click", addListItem);
 
-
-
+/* es soll ein neues Listenelement erstellt und zur Liste
+hinzugefügt werden */
 function addListItem(e) {
   e.preventDefault();
-  /*   const listElement = document.createElement("li");
-  listElement.innerHTML = userInput.value;
-  document.getElementById("list_items").appendChild(listElement);
- */
+
   const divElement = document.createElement("div");
   divElement.classList.add("list_div_item");
   divElement.innerHTML = `<input
@@ -47,13 +58,11 @@ function addListItem(e) {
   document.getElementById("list_items").appendChild(divElement);
   
 
-  /* Die ToDo Einträge sollen als Array in Local Storage 
-  gespeichert werden unter einem Key */
-
-  userInputArray.push(userInput.value);
-  console.log(userInputArray);
-  /*   localStorage.setItem("items", userInputArray); */
-  localStorage.setItem("itemsTwo", JSON.stringify(userInputArray));
+  /* itemsArray soll geupdated werden mit neuen ToDos/UserInputs
+  und in Local Storage gespeichert werden unter einem Key */
+  itemsArray.push(userInput.value);
+  console.log(itemsArray);
+  localStorage.setItem("items", JSON.stringify(itemsArray));
 
   /* localStorage.setItem("item", userInput.value);
   item += 1;
@@ -72,7 +81,7 @@ function addListItem(e) {
 
 
 
-const trashDeleteButton = document.getElementsById("trash_Can");
+/* const trashDeleteButton = document.getElementsById("trash_Can");
 trashDeleteButton.addEventListener("click", console.log("JUPPI"));
 
 function deleteTodos(e) {
@@ -80,5 +89,6 @@ function deleteTodos(e) {
     e.target.remove();
   }
 }
-/* //delete todos
-todoList.addEventListener('click', deleteTodos); */
+//delete todos
+todoList.addEventListener('click', deleteTodos);
+ */
