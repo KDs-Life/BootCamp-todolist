@@ -30,7 +30,7 @@ function displayItems() {
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
                 <div class="todo_text_area">
                   <h4>${itemsArray[i]}</h4>
-                  <p>19.08.2023</p>
+                  <p>${currentDate}</p>
                 </div>
                 <button class="btn trashcan"><i class="fa fa-trash"></i></button>
               </div>`;
@@ -58,3 +58,25 @@ displayItems();
 document.getElementById("share").addEventListener("click", () => {
   alert("You are NOT able to Share now!");
 });
+
+const containerNew = document.getElementById("inside_container2");
+const plusButton = document.getElementById("plus");
+
+/* plusButton.addEventListener("click", changeColor); */
+
+function changeColor(e) {
+  e.preventDefault;
+  document.body.style.background = "#191a21";
+}
+
+/* plusButton.addEventListener("click", createContainer); */
+
+plusButton.addEventListener("click", changeColor);
+
+function createContainer(e) {
+  e.preventDefault;
+  const newDiv = document.createElement("div");
+  const newContent = document.createTextNode("Hey there");
+  newDiv.appendChild(newContent);
+  containerNew.appendChild(newDiv);
+}
