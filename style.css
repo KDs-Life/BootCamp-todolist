@@ -29,7 +29,8 @@ header {
 }
 
 main {
-  border: 2px solid black;
+  width: 100%;
+  margin: 20px;
 }
 
 .container.entry_content {
@@ -169,6 +170,12 @@ form {
   margin-bottom: 5px;
 }
 
+.item:hover {
+  padding: 7px 15px;
+  background-color: #ca7e49;
+  box-shadow: black;
+}
+
 .item h4 {
   color: white;
   font-size: 1.2rem;
@@ -194,50 +201,38 @@ textarea {
   justify-content: center;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
+footer {
+  text-align: center;
+  color: #272932b5;
+  font-size: 1rem;
 }
 
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {
-    width: 8.33%;
-  }
-  .col-2 {
-    width: 16.66%;
-  }
-  .col-3 {
-    width: 25%;
-  }
-  .col-4 {
-    width: 33.33%;
-  }
-  .col-5 {
-    width: 41.66%;
-  }
-  .col-6 {
-    width: 50%;
-  }
-  .col-7 {
-    width: 58.33%;
-  }
-  .col-8 {
-    width: 66.66%;
-  }
-  .col-9 {
-    width: 75%;
-  }
-  .col-10 {
-    width: 83.33%;
-  }
-  .col-11 {
-    width: 91.66%;
-  }
-  .col-12 {
-    width: 100%;
-  }
+/* Smartphone Hochformat (Portrait) /
+@media only screen
+  and (min-width: 320px)
+  and (max-width: 479px) {
+
 }
+
+/ Smartphone Querformat (Landscape) */
+@media only screen
+  and (min-width: 480px)
+  and (max-width: 767px) {
+
+}
+
+/* CSS Merkmale für Geräte mit einer minimalen Breite  /
+@media only screen
+  and (min-width: 768px) {
+ 
+}
+
+/ CSS Merkmale für Geräte mit einer maximalen Breite  */
+@media only screen
+  and (max-width: 1024px) {
+ 
+}
+
 
 /*   //////////////////////
   Corporate Colors 

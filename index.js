@@ -8,6 +8,14 @@ document.getElementById("add_Button").addEventListener("click", () => {
   createItem(item);
 });
 
+/* get actual date */
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+let currentDate = `${day}/${month}/${year}`;
+document.getElementById("entry_date").innerHTML = currentDate;
+
 function createItem(item) {
   itemsArray.push(item.value);
   localStorage.setItem("items", JSON.stringify(itemsArray));
@@ -45,3 +53,8 @@ function deleteItem(index) {
 }
 
 displayItems();
+
+/* alert on Share */
+document.getElementById("share").addEventListener("click", () => {
+  alert("You are NOT able to Share now!");
+});
