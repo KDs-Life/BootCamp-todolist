@@ -1,103 +1,60 @@
-
-const addButton = document.getElementById("add_Button");
-const userInput = document.getElementById("user_input");
-
-const deleteButton = document.getElementById("mulltone");
-const taskItem = document.getElementById("list_items");
-
-
-///Phillip
-
-
-const itemsArray = localStorage.getItem("item")
+// Die items, die sich im Local Storage befinden, werden in einem neuen Array gespeichert und geparst
+const itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
-console.log(itemsArray);
 
+document.getElementById("add_Button").addEventListener("click", () => {
+  const item = document.getElementById("user_input");
+  createItem(item);
+});
 
-/* get actual date for the to-do entrys */ ///Phillip
+/* get actual date */
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+let currentDate = `${day}/${month}/${year}`;
+document.getElementById("entry_date").innerHTML = currentDate;
 
-
-let date = new Date().toLocaleDateString();
-document.getElementById("entry_date").innerHTML = date;
-console.log(date);
-
-
-
-function addListItem(e) {
-  e.preventDefault();
-  console.log("Whatup");
-  /*   const listElement = document.createElement("li");
-  listElement.innerHTML = userInput.value;
-  document.getElementById("list_items").appendChild(listElement);
- */
-  const divElement = document.createElement("div");
-  divElement.classList.add("list_div_item");
-  divElement.innerHTML = `<input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="flexCheckDefault"
-                            />
-                            <div class="todo_text_area">
-                              <textarea placeholder="Add your task here!" rows="1" cols="19">${userInput.value}</textarea>
-                              <p>19.08.2023</p>
-                            </div>
-
-                            <button id="mulltone" >
-                            <span class="material-symbols-outlined"> delete </span> 
-                          </button>  `;
-  /*   divElement.innerHTML = `<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><p>${userInput.value}</p><br><p>${date}</p><span class="material-symbols-outlined">
-  delete
-  </span>`; 
-  
-  <span class="material-symbols-outlined"> delete </span>
-  */
-  document.getElementById("list_items").appendChild(divElement);
-
-  /*   localStorage.setItem(item, userInput.value); */
-
-  userInput.value = "";
-
-  /*   const btn = document.createElement("button").innerHTML("HelloWorld");
-  document.body.appenChild(btn); */
-  /*   document.getElementById("list_items").innerHTML = userInput.value; */
+function createItem(item) {
+  itemsArray.push(item.value);
+  localStorage.setItem("items", JSON.stringify(itemsArray));
+  location.reload();
 }
 
+function displayItems() {
+  let items = "";
+  for (let i = 0; i < itemsArray.length; i++) {
+    items += `<div class="item">
 
-
-// add text alert ////////// Marta /////
-
-
-function addTextAlert() {
-  if (userInput.value.length > 0) {
-    alert("Great! Your task will be added to the list.");
-  } else {
-    alert("Your task will be added to the list and you can put some text there.");
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                <div class="todo_text_area">
+                  <h4>${itemsArray[i]}</h4>
+                  <p>19.08.2023</p>
+                </div>
+                <button class="btn trashcan"><i class="fa fa-trash"></i></button>
+              </div>`;
   }
+  document.getElementById("bloeder").innerHTML = items;
+  addDeleteListeners();
 }
 
-
-
-
-addButton.addEventListener("click", addTextAlert);
-addButton.addEventListener("click", addListItem);
-
-//deleteButton.addEventListener("click", deleteButton);
-//addButton.addEventListener(addTextAlert, addListItem);
-//addButton.addEventListener("click", addListItem);
-
-// end of add text alert ////////// Marta /////
-
-
-
-/////////////DELETE button ///////// 
-
-
-/*
-function deleteButton() {
-  taskItem.remove();
+function addDeleteListeners() {
+  const deleteButtons = document.querySelectorAll(".trashcan");
+  deleteButtons.forEach((button, index) => {
+    button.addEventListener("click", () => deleteItem(index));
+  });
 }
-*/
 
-//deleteButton.addEventListener("click", deleteButton);
+function deleteItem(index) {
+  itemsArray.splice(index, 1);
+  localStorage.setItem("items", JSON.stringify(itemsArray));
+  displayItems();
+}
+
+displayItems();
+
+/* alert on Share */
+document.getElementById("share").addEventListener("click", () => {
+  alert("You are NOT able to Share now!");
+});

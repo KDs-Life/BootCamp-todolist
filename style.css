@@ -11,7 +11,6 @@ body {
 }
 
 header {
-  border: 1px solid red;
   margin: 20px;
 }
 
@@ -24,8 +23,6 @@ header {
   height: 30px;
 }
 
-
-
 .col.overview {
   padding: 0;
 }
@@ -34,7 +31,6 @@ header {
   max-width: 60px;
   height: 30px;
 }
-
 
 .col.menue {
   padding: 0;
@@ -42,14 +38,15 @@ header {
 }
 
 main {
+  width: 100%;
   margin: 20px;
 }
-
 
 .container.entry_content {
   background-color: #e7ecef;
   border-radius: 10px;
   padding: 10px;
+  margin: 0;
 }
 
 .input_container {
@@ -64,7 +61,6 @@ form {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 #add_Button,
@@ -126,9 +122,6 @@ form {
   margin: 0;
 }
 
-
-}
-
 #add_Button,
 .btn.btn-primary.btn-sm {
   margin-top: 5px;
@@ -144,17 +137,22 @@ form {
   margin: 0 0 10px 0;
 }
 
-.entry_header2 {
+.container.entry_header2 {
   color: #d8a47f;
   background-color: #0f7173;
   border-radius: 10px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   margin: 0 0 10px 0;
   margin-top: 20px;
   height: 100px;
+}
+
+.entry_header2:hover {
+  padding: 13px;
+  background-color: #17989b;
+  box-shadow: black;
 }
 
 .entry_header3 {
@@ -164,10 +162,15 @@ form {
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   margin: 0 0 10px 0;
   margin-top: 20px;
   height: 100px;
+}
+
+.entry_header3:hover {
+  padding: 13px;
+  background-color: #3c3f4d;
+  box-shadow: black;
 }
 
 .entry_topic {
@@ -199,15 +202,12 @@ form {
   padding: 0;
 }
 
-
-
-
 .list_div_item {
   border: 3px solid rgb(60, 255, 0);
   color: #286080;
+}
 
 .list_div_item {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -225,11 +225,35 @@ form {
 }
 
 .form-check-input {
-  margin: 0px
+  margin: 0px;
 }
 
 .todo_text_area {
   margin-left: 6px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d8a47f;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.item:hover {
+  padding: 7px 15px;
+  background-color: #ca7e49;
+  box-shadow: black;
+}
+
+.item h4 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 textarea {
@@ -244,68 +268,46 @@ textarea {
   resize: none;
 }
 
-
-
 .todo_text_area p {
   font-size: 0.6rem;
   margin-bottom: 0;
 }
 
-
 .todo_text_area p {
   font-size: 0.6rem;
   margin-bottom: 0;
 }
-
 
 .share_row {
   display: flex;
   justify-content: center;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
+footer {
+  text-align: center;
+  color: #272932b5;
+  font-size: 1rem;
 }
 
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {
-    width: 8.33%;
-  }
-  .col-2 {
-    width: 16.66%;
-  }
-  .col-3 {
-    width: 25%;
-  }
-  .col-4 {
-    width: 33.33%;
-  }
-  .col-5 {
-    width: 41.66%;
-  }
-  .col-6 {
-    width: 50%;
-  }
-  .col-7 {
-    width: 58.33%;
-  }
-  .col-8 {
-    width: 66.66%;
-  }
-  .col-9 {
-    width: 75%;
-  }
-  .col-10 {
-    width: 83.33%;
-  }
-  .col-11 {
-    width: 91.66%;
-  }
-  .col-12 {
-    width: 100%;
-  }
+/* Smartphone Hochformat (Portrait) /
+@media only screen
+  and (min-width: 320px)
+  and (max-width: 479px) {
+
+}
+
+/ Smartphone Querformat (Landscape) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* CSS Merkmale für Geräte mit einer minimalen Breite  /
+@media only screen
+  and (min-width: 768px) {
+ 
+}
+
+/ CSS Merkmale für Geräte mit einer maximalen Breite  */
+@media only screen and (max-width: 1024px) {
 }
 
 /*   //////////////////////
@@ -318,4 +320,3 @@ textarea {
   #272932
   #D8A47F
   ////////////////////// */
-
