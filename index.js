@@ -36,7 +36,7 @@ function displayItems() {
                   <p>${currentDate}</p>
                 </div>
                 <div class="btn-are">
-                <button class="btn trashcan"><i class="fa fa-trash"></i></button>
+                <button class="btn trashcan"><i class="fa fa-trash" ></i></button>
                 <button class="btn edit"><i class="fa fa-pencil"></i></button>
                 </div>
               </div>`;

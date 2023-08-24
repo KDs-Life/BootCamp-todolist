@@ -76,7 +76,9 @@ form {
 .btn.btn-primary.btn-sm {
   margin-top: 5px;
 }
-
+i {
+  border: #0f7173 solid 1px;
+}
 /* Stile für den Eintrags-Header festlegen */
 .entry_header {
   display: flex;
@@ -93,6 +95,7 @@ form {
   border-radius: 10px;
   padding: 10px;
   display: flex;
+  text-align: center;
   justify-content: space-between;
   margin: 0 0 10px 0;
   margin-top: 20px;
