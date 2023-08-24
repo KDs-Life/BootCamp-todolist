@@ -74,7 +74,8 @@ form {
   margin: 0 0 10px 0;
 }
 
-.entry_header2 {
+.entry_header2,
+.container.plus {
   color: #d8a47f;
   background-color: #0f7173;
   border-radius: 10px;

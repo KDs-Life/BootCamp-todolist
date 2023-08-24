@@ -59,7 +59,7 @@ document.getElementById("share").addEventListener("click", () => {
   alert("You are NOT able to Share now!");
 });
 
-const containerNew = document.getElementById("inside_container2");
+const containerNew = document.getElementById("plus_area");
 const plusButton = document.getElementById("plus");
 
 /* plusButton.addEventListener("click", changeColor); */
@@ -69,14 +69,15 @@ function changeColor(e) {
   document.body.style.background = "#191a21";
 }
 
-/* plusButton.addEventListener("click", createContainer); */
-
 plusButton.addEventListener("click", changeColor);
+
+/* plusButton.addEventListener("click", changeColor); */
 
 function createContainer(e) {
   e.preventDefault;
   const newDiv = document.createElement("div");
-  const newContent = document.createTextNode("Hey there");
-  newDiv.appendChild(newContent);
+  /*   const newContent = document.createTextNode("Hey there"); */
+  newDiv.innerHTML = "Hey there";
+/*   newDiv.appendChild(newContent); */
   containerNew.appendChild(newDiv);
 }
