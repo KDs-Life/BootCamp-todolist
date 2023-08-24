@@ -6,6 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
       rel="stylesheet"
     />
@@ -51,8 +55,8 @@
         <div class="row"></div>
       </nav>
     </header>
-    <main>
-      <div class="container entry_content">
+    <main id="main_container">
+      <div class="container entry_content" id="entry_container_big">
         <div class="entry_header">
           <div class="entry_topic">
             <h3>ENTRY 01 TOPIC</h3>
@@ -85,22 +89,43 @@
           </ul>
         </div>
         <div class="share_row">
-          <button id="share" type="button" class="btn btn-primary btn-sm">Share</button>
+          <button id="share" type="button" class="btn btn-primary btn-sm">
+            Share
+          </button>
         </div>
       </div>
 
-      <div class="container entry_header2">
-        <div class="entry_topic">
-          <h3>Learning JS with Khalid</h3>
-        </div>
-        <div class="entry_date_container"><p id="entry_date2">Date</p></div>
+<!--       <div class="container plus" id="plus_area">
       </div>
-
-      <div class="container entry_header3">
-        <div class="entry_topic">
-          <h3>Marta's Birthday Party</h3>
+ -->
+      <div class="container new" id="inside_container">
+        <div class="entry_header2">
+          <div class="entry_topic2">
+            <h3>Learning JS with Khalid</h3>
+          </div>
+          <div class="entry_date_container2"><p id="entry_date2">Date</p></div>
         </div>
-        <div class="entry_date_container"><p id="entry_date3">Date</p></div>
+
+        <div class="entry_header3">
+          <div class="entry_topic3">
+            <h3>Marta's Birthday Party</h3>
+          </div>
+          <div class="entry_date_container2"><p id="entry_date3">Date</p></div>
+        </div>
+
+        <div class="entry_header4" id="inside_container2">
+          <div class="entry_topic4">
+            <h3>Job Interview Preparations</h3>
+          </div>
+          <div class="entry_date_container4"><p id="entry_date3">Date</p></div>
+        </div>
+        <form action="">
+          <button class="plus_icon" type="submit" disabled>
+            <span id="plus" class="material-symbols-outlined">
+              add_circle
+            </span>
+          </button>
+        </form>
       </div>
     </main>
 
