@@ -23,7 +23,7 @@ header {
 
 /* Ändere die Schriftgröße und die Höhe eines span-Elements beim Überfahren mit der Maus */
 span:hover {
-  font-size: 3,5rem;
+  font-size: 3, 5rem;
   height: 80px;
 }
 
@@ -76,9 +76,35 @@ form {
 .btn.btn-primary.btn-sm {
   margin-top: 5px;
 }
-i {
-  border: #0f7173 solid 1px;
+
+.btn-are {
+  /* border: solid 1px red; */
+  display: flex;
+  flex-direction: column;
 }
+
+.fa.fa-trash {
+  /* border: #0f7173 solid 1px; */
+  font-size: 1.2rem;
+  color: #545454;
+}
+
+.btn.trashcan {
+  margin: 0;
+  padding: 0;
+}
+
+.btn.edit {
+  margin: 0;
+  padding: 0;
+}
+
+.fa-pencil {
+  /* border: #0f7173 solid 1px; */
+  font-size: 1.2rem;
+  color: #545454;
+}
+
 /* Stile für den Eintrags-Header festlegen */
 .entry_header {
   display: flex;
@@ -154,6 +180,7 @@ i {
 .row.list_content {
   padding: 20px;
   padding-bottom: 0;
+  display: flex;
 }
 
 /* Stile für ungeordnete Listen festlegen */
@@ -182,14 +209,10 @@ i {
 
 /* Margin links für das Element mit der Klasse "todo_text_area" festlegen */
 .todo_text_area {
-  margin-left: 6px;
-}
+  border: solid 1px red;
+  width: 80%;
 
-/* Stile für den Bereich mit der Klasse "btn-are" festlegen */
-.btn-are {
-  /* border: solid 1px red; */
-  display: flex;
-  justify-content: right;
+  margin-left: 6px;
 }
 
 /* Stile für die Einträge festlegen */
@@ -210,15 +233,16 @@ i {
 .item:hover {
   padding: 7px 15px;
   background-color: #ca7e49;
-  box-shadow: schwarz;
+  box-shadow: black 2px 2px 10px;
 }
 
 /* Stile für die Überschriften in den Einträgen festlegen */
 .item h4 {
   border: 1px solid grün;
-  color: weiß;
+  color: white;
   margin: 10px;
   text-align: center;
+  font-size: 1rem;
 }
 
 /* Stile für das Textarea-Element festlegen */
