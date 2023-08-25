@@ -20,7 +20,9 @@ function createItem(item) {
   const inputValue = item.value;
 
   //inputValue === ''? alert('You must write something!') : console.log(inputValue);
-  inputValue === ''? alert('You must write something!') : itemsArray.push(inputValue);
+  inputValue === ""
+    ? alert("You must write something!")
+    : itemsArray.push(inputValue);
   //inputValue = itemsArray.push(inputValue);
   localStorage.setItem("items", JSON.stringify(itemsArray));
   location.reload();
@@ -102,6 +104,6 @@ function createContainer(e) {
   const newDiv = document.createElement("div");
   /*   const newContent = document.createTextNode("Hey there"); */
   newDiv.innerHTML = "Hey there";
-/*   newDiv.appendChild(newContent); */
+  /*   newDiv.appendChild(newContent); */
   containerNew.appendChild(newDiv);
 }
