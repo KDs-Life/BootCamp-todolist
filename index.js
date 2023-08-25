@@ -17,11 +17,16 @@ let currentDate = `${day}/${month}/${year}`;
 document.getElementById("entry_date").innerHTML = currentDate;
 
 function createItem(item) {
-  itemsArray.push(item.value);
+  const inputValue = item.value;
+
+  //inputValue === ''? alert('You must write something!') : console.log(inputValue);
+  inputValue === ""
+    ? alert("You must write something!")
+    : itemsArray.push(inputValue);
+  //inputValue = itemsArray.push(inputValue);
   localStorage.setItem("items", JSON.stringify(itemsArray));
   location.reload();
 }
-
 function displayItems() {
   let items = "";
   for (let i = 0; i < itemsArray.length; i++) {
@@ -32,11 +37,15 @@ function displayItems() {
                   <h4>${itemsArray[i]}</h4>
                   <p>${currentDate}</p>
                 </div>
-                <button class="btn trashcan"><i class="fa fa-trash"></i></button>
+                <div class="btn-are">
+                <button class="btn trashcan"><i class="fa fa-trash" ></i></button>
+                <button class="btn edit"><i class="fa fa-pencil"></i></button>
+                </div>
               </div>`;
   }
   document.getElementById("bloeder").innerHTML = items;
   addDeleteListeners();
+  addEditListeners(); // Add this line to attach edit listeners
 }
 
 function addDeleteListeners() {
@@ -50,6 +59,23 @@ function deleteItem(index) {
   itemsArray.splice(index, 1);
   localStorage.setItem("items", JSON.stringify(itemsArray));
   displayItems();
+}
+
+function addEditListeners() {
+  const editButtons = document.querySelectorAll(".edit");
+  editButtons.forEach((button, index) => {
+    button.addEventListener("click", () => editItem(index));
+  });
+}
+
+function editItem(index) {
+  const itemText = itemsArray[index];
+  const newItemText = prompt("Edit the item:", itemText);
+  if (newItemText !== null) {
+    itemsArray[index] = newItemText;
+    localStorage.setItem("items", JSON.stringify(itemsArray));
+    displayItems();
+  }
 }
 
 displayItems();
@@ -78,6 +104,6 @@ function createContainer(e) {
   const newDiv = document.createElement("div");
   /*   const newContent = document.createTextNode("Hey there"); */
   newDiv.innerHTML = "Hey there";
-/*   newDiv.appendChild(newContent); */
+  /*   newDiv.appendChild(newContent); */
   containerNew.appendChild(newDiv);
 }
